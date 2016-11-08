@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 16:43:08 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/07 18:01:55 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/08 17:31:51 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,6 +26,14 @@ typedef struct	s_list
  ** fonctions principales
 */
 int				ft_strlen(const char *s);
+char			*ft_strcpy(char *dest, const char *src);
+int				ft_isalpha(int c);
+int				ft_isdigit(int c);
+int				ft_isalnum(int c);
+int				ft_isasci(int c);
+int				ft_isprint(int c);
+int				ft_toupper(int c);
+int				ft_tolower(int c);
 
 /*
  **fonctions supplementaires

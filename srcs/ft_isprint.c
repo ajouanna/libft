@@ -1,28 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putendl.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 18:16:56 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/08 16:18:04 by ajouanna         ###   ########.fr       */
+/*   Created: 2016/11/08 16:24:22 by ajouanna          #+#    #+#             */
+/*   Updated: 2016/11/08 16:37:03 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-#include "libft.h"
-
-void	ft_putendl(char const *s)
+int		ft_isprint(int c)
 {
-	int		l;
-	char	c;
-
-	if (s)
-	{
-		l = ft_strlen(s);
-		write(1, s, l);
-		c = '\n';
-		write(1, &c, 1);
-	}
+	if (c >= 32 && c <= 126)
+		return (1);
+	else
+		return (0);
 }

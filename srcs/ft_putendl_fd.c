@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 18:15:40 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/07 18:19:27 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/08 16:18:25 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,8 @@
 
 void	ft_putendl_fd(char const *s, int fd)
 {
-	int l;
-	char c;
+	int		l;
+	char	c;
 
 	if (s)
 	{
