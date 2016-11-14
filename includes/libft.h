@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 16:43:08 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/08 17:31:51 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/14 12:01:32 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -25,8 +25,29 @@ typedef struct	s_list
 /*
  ** fonctions principales
 */
-int				ft_strlen(const char *s);
+
+void			*ft_memset(void *s, int c, size_t n);
+void			ft_bzero(void *s, size_t n);
+void			*ft_memcpy(void *dest, const void *src, size_t n);
+void			*ft_memccpy(void *dest, const void *src, int c, size_t n);
+void			*ft_memmove(void *dest, const void *src, size_t n);
+void			*ft_memchr(const void *s, int c, size_t n);
+int				ft_memcmp(const void *s1, const void *s2, size_t n);
+size_t			ft_strlen(const char *s);
+char			*ft_strdup(const char *s);
 char			*ft_strcpy(char *dest, const char *src);
+int				ft_atoi(const char *nptr);
+char			*ft_strncpy(char *dest, const char *srca, size_t n);
+char			*ft_strcat(char *dest, const char *src);
+char			*ft_strncat(char *dest, const char *src, size_t n);
+size_t			ft_strlcat(char *dst, const char *src, size_t size);
+char			*ft_strchr(const char *s, int c);
+char			*ft_strrchr(const char *s, int c);
+char			*ft_strstr(const char *haystack, const char *needle);
+char			*ft_strnstr(const char *haystack, const char *needle,\
+					size_t len);
+int				ft_strcmp(const char *s1, const char *s2);
+int				ft_strncmp(const char *s1, const char *s2, size_t n);
 int				ft_isalpha(int c);
 int				ft_isdigit(int c);
 int				ft_isalnum(int c);
@@ -38,6 +59,7 @@ int				ft_tolower(int c);
 /*
  **fonctions supplementaires
 */
+
 void			*ft_memalloc(size_t size);
 void			ft_memdel(void **ap);
 char			*ft_strnew(size_t size);

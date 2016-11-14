@@ -1,25 +1,36 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_memalloc.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 14:55:14 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/07 17:40:54 by ajouanna         ###   ########.fr       */
+/*   Created: 2016/11/08 17:32:06 by ajouanna          #+#    #+#             */
+/*   Updated: 2016/11/14 12:38:28 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_strlen(const char *s)
+/*
+** Alloue (avec malloc(3)) et retourne une zone de mémoire
+** “fraiche”. La mémoire allouée est initialisée à 0. Si l’allocation
+** échoue, la fonction renvoie NULL
+*/
+
+void	*ft_memalloc(size_t size)
 {
+	unsigned char *ret;
 	size_t i;
 
-	i = 0;
-	while (*(s + i) != 0)
+	if ((ret = (unsigned char *)malloc(size)))
 	{
-		i++;
+		i = 0;
+		while (i < size)		
+		{
+			ret[i] = 0;
+			i++;
+		}
 	}
-	return (i);
+	return (ret);
 }

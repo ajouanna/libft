@@ -6,21 +6,20 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 15:57:15 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/08 18:43:33 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/14 12:38:08 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
 /*
- ** add char c at beginning of string str
- ** allocates needed memory and releases memory used by str
+** add char c at beginning of string str
+** allocates needed memory and releases memory used by str
 */
 
 char	*prependchar(char c, char *str)
 {
 	char	*res;
-	char	*dest;
 	int		len;
 
 	len = ft_strlen(str);
@@ -28,7 +27,7 @@ char	*prependchar(char c, char *str)
 	if (res == NULL)
 		return (NULL);
 	res[0] = c;
-	dest = ft_strcpy(res + 1, str);
+	ft_strcpy(res + 1, str);
 	free(str);
 	return (res);
 }
@@ -40,7 +39,7 @@ char	*ft_itoa(int n)
 	int				isnegative;
 
 	isnegative = 0;
-	res = malloc(sizeof(char));
+	res = (char *)malloc(sizeof(char));
 	if (res == NULL)
 		return (NULL);
 	res[0] = 0;

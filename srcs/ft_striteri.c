@@ -1,25 +1,32 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_strlen.c                                        :+:      :+:    :+:   */
+/*   ft_striteri.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/07 14:55:14 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/07 17:40:54 by ajouanna         ###   ########.fr       */
+/*   Created: 2016/11/08 17:32:06 by ajouanna          #+#    #+#             */
+/*   Updated: 2016/11/14 12:42:38 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include "libft.h"
 
-size_t			ft_strlen(const char *s)
+/*
+** Applique la fonction f à chaque caractère de la chaine de
+** caractères passée en paramètre en précisant son index en premier
+** argument. Chaque caractère est passé par adresse à la
+** fonction f afin de pouvoir être modifié si nécéssaire.
+*/
+
+void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
-	size_t i;
+	unsigned int i;
 
 	i = 0;
-	while (*(s + i) != 0)
+	while(s[i])
 	{
+		f(i, s + i);
 		i++;
 	}
-	return (i);
 }
