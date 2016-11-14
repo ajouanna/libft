@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 17:32:06 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 12:44:31 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/14 15:42:21 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,5 +20,5 @@
 
 char	*ft_strnew(size_t size)
 {
-	return ((char *)ft_memalloc(size));
+	return ((char *)ft_memalloc(size + 1));
 }

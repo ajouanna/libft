@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 17:32:06 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 12:39:31 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/14 14:46:07 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,9 +14,9 @@
 
 void			*ft_memcpy(void *dest, const void *src, size_t n)
 {
-	size_t i;
-	const unsigned char *uc_src;
-	unsigned char *uc_dest;
+	size_t				i;
+	const unsigned char	*uc_src;
+	unsigned char		*uc_dest;
 
 	uc_src = src;
 	uc_dest = dest;

@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_striteri.c                                       :+:      :+:    :+:   */
+/*   ft_striteri.c                                      :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
+/*   By: ajouanna <ajouanna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2016/11/08 17:32:06 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 12:42:38 by ajouanna         ###   ########.fr       */
+/*   Created: 2016/11/14 14:30:17 by ajouanna          #+#    #+#             */
+/*   Updated: 2016/11/14 19:10:13 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,13 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int i;
 
-	i = 0;
-	while(s[i])
+	if (s)
 	{
-		f(i, s + i);
-		i++;
+		i = 0;
+		while (s[i])
+		{
+			f(i, s + i);
+			i++;
+		}
 	}
 }

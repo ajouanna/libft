@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 17:32:06 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 12:34:17 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/14 19:28:08 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,12 +33,13 @@ char	*ft_strtrim(char const *s)
 	}
 	len_s = ft_strlen(s);
 	prem = 0;
-	while (s[prem] && s[prem] != ' ' && s[prem] != '\t' && s[prem] != '\n')
+	while (s[prem] && (s[prem] == ' ' || s[prem] == '\t' || s[prem] == '\n'))
 	{
 		prem++;
 	}
 	der = len_s - 1;
-	while (s[der] && s[der] != ' ' && s[der] != '\t' && s[der] != '\n')
+	while (s[der] && (der >= prem) &&
+			(s[der] == ' ' || s[der] == '\t' || s[der] == '\n'))
 	{
 		der--;
 	}

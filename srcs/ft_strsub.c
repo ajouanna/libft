@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 17:32:06 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 12:36:43 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/14 15:09:37 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -29,13 +29,13 @@ char	*ft_strsub(char const *s, unsigned int start, size_t len)
 
 	if ((res = (char *)malloc(sizeof(char) * (len + 1))) != NULL)
 	{
-		i = start;
+		i = 0;
 		max = start + len;
 		if (s)
 		{
-			while ((i < max) && (s[i]))
+			while (((i + start) < max) && (s[i]))
 			{
-				res[i] = s[i];
+				res[i] = s[i + start];
 				i++;
 			}
 		}

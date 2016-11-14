@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 13:04:13 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 13:06:02 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/14 19:11:48 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -24,7 +24,9 @@ char	*ft_strmap(char const *s, char (*f)(char))
 	unsigned int	i;
 	char			*res;
 
-	if ((res = malloc(sizeof(char) * ft_strlen(s) + 1)))
+	if (!s)
+		return (NULL);
+	if ((res = malloc(sizeof(char) * (ft_strlen(s) + 1))))
 	{
 		i = 0;
 		while (s[i])
@@ -32,6 +34,7 @@ char	*ft_strmap(char const *s, char (*f)(char))
 			res[i] = f(s[i]);
 			i++;
 		}
+		res[i] = 0;
 	}
 	return (res);
 }

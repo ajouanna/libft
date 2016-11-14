@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 17:32:06 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 12:38:28 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/14 14:48:52 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@
 
 void	*ft_memalloc(size_t size)
 {
-	unsigned char *ret;
-	size_t i;
+	unsigned char	*ret;
+	size_t			i;
 
 	if ((ret = (unsigned char *)malloc(size)))
 	{
 		i = 0;
-		while (i < size)		
+		while (i < size)
 		{
 			ret[i] = 0;
 			i++;

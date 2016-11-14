@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 15:57:15 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 12:38:08 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/14 14:52:06 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -36,11 +36,8 @@ char	*ft_itoa(int n)
 {
 	unsigned int	nb;
 	char			*res;
-	int				isnegative;
 
-	isnegative = 0;
-	res = (char *)malloc(sizeof(char));
-	if (res == NULL)
+	if ((res = (char *)malloc(sizeof(char))) == NULL)
 		return (NULL);
 	res[0] = 0;
 	if (n == 0)
@@ -48,19 +45,17 @@ char	*ft_itoa(int n)
 		res = prependchar('0', res);
 		return (res);
 	}
+	nb = n;
 	if (n < 0)
 	{
-		isnegative = 1;
 		nb = -n;
 	}
-	else
-		nb = n;
 	while (nb)
 	{
 		res = prependchar(nb % 10 + '0', res);
 		nb /= 10;
 	}
-	if (isnegative)
+	if (n < 0)
 		res = prependchar('-', res);
 	return (res);
 }

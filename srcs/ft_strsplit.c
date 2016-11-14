@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 17:32:06 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 12:47:38 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/14 19:18:10 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -73,6 +73,8 @@ char		**ft_strsplit(char const *s, char c)
 	size_t	i;
 	size_t	j;
 
+	if (!s)
+		return (NULL);
 	if ((tab = (char **)malloc(sizeof(char *) * 1)) == NULL)
 		return (NULL);
 	tab[0] = NULL;
