@@ -17,19 +17,24 @@
 ** f et crée une nouvelle liste “fraiche” avec malloc(3) ré-
 ** sultant des applications successives. Si une allocation échoue,
 ** la fonction renvoie NULL.
+** NB : ma comprehension est que c est la fonction f qui fait un malloc
 */
 
 t_list 		*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem))
 {
 	t_list *pt_next;
-	t_list *pt;
+	t_list *result;
 
+	if (!lst)
+		return (NULL);
 	if (lst->next)
 	{
 		pt_next = ft_lstmap(lst->next, f);
 	}
-	pt = f(lst);
-	if (pt)
-		ft_lstadd(&pt_next, pt);
-	return (pt);
+	else
+		pt_next = NULL;
+	result = f(lst);
+	if (result)
+		result->next = pt_next;
+	return (result);
 }
