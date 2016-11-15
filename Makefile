@@ -56,6 +56,12 @@ LIST_SRC = \
 		$(SRC)/ft_putendl_fd.c \
 		$(SRC)/ft_putnbr.c \
 		$(SRC)/ft_putnbr_fd.c \
+		$(SRC)/ft_lstnew.c \
+		$(SRC)/ft_lstdelone.c \
+		$(SRC)/ft_lstdel.c \
+		$(SRC)/ft_lstadd.c \
+		$(SRC)/ft_lstiter.c \
+		$(SRC)/ft_lstmap.c
 
 
 LIST_OBJ = $(LIST_SRC:$(SRC)/%.c=$(OBJ)/%.o)

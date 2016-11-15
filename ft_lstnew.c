@@ -36,7 +36,7 @@ t_list			*ft_lstnew(void const *content, size_t content_size)
 	}
 	else
 	{
-		res->content = content;
+		res->content = (void *)content;
 		res->content_size = content_size;
 	}
 	res->next = NULL;
