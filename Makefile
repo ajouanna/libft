@@ -63,7 +63,7 @@ LIST_OBJ = $(LIST_SRC:$(SRC)/%.c=$(OBJ)/%.o)
 all : $(NAME)
 
 $(NAME) : $(LIST_SRC)
-	gcc -Wall -Wextra -Werror -fPIC -I $(INC) $(LIST_SRC) -c
+	gcc -Wall -Wextra -Werror -I $(INC) $(LIST_SRC) -c
 	ar rc libft.a $(LIST_OBJ)
 	ranlib libft.a
 
