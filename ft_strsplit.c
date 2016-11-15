@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 17:32:06 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 19:18:10 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/15 11:28:38 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -58,6 +58,32 @@ static void	free_tab(char **tab)
 }
 
 /*
+** extrait un mot, le copie dans une nouvelle chaine
+** l index est mis a jour
+*/
+
+static char	*extract_word(const char *s, char c, size_t *index)
+{
+	size_t	j;
+	char	*str;
+
+	j = 0;
+	while (s[*index + j] && s[*index + j] != c)
+		j++;
+	if ((str = (char *)malloc(sizeof(char) * (j + 1))) == NULL)
+		return (NULL);
+	j = 0;
+	while (s[*index + j] && s[*index + j] != c)
+	{
+		str[j] = s[*index + j];
+		j++;
+	}
+	str[j] = 0;
+	*index += j;
+	return (str);
+}
+
+/*
 ** Alloue (avec malloc(3)) et retourne un tableau de chaines de
 ** caractères “fraiches” (toutes terminées par un ’\0’, le tableau
 ** également donc) résultant de la découpe de s selon le caractère
@@ -71,7 +97,6 @@ char		**ft_strsplit(char const *s, char c)
 	char	**tab;
 	char	*str;
 	size_t	i;
-	size_t	j;
 
 	if (!s)
 		return (NULL);
@@ -85,23 +110,12 @@ char		**ft_strsplit(char const *s, char c)
 			i++;
 		else
 		{
-			j = 0;
-			while (s[i + j] && s[i + j] != c)
-				j++;
-			if ((str = (char *)malloc(sizeof(char) * (j + 1))) == NULL)
+			if ((str = extract_word(s, c, &i)) == NULL)
 			{
 				free_tab(tab);
 				return (NULL);
 			}
-			j = 0;
-			while (s[i + j] && s[i + j] != c)
-			{
-				str[j] = s[i + j];
-				j++;
-			}
-			str[j] = 0;
 			tab = realloc_tab(tab, str);
-			i += j;
 		}
 	}
 	return (tab);

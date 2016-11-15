@@ -1,6 +1,6 @@
 NAME = libft.a
-SRC = ./srcs
-INC = ./includes
+SRC = .
+INC = .
 OBJ = .
 
 LIST_SRC = \
@@ -58,7 +58,7 @@ LIST_SRC = \
 		$(SRC)/ft_putnbr_fd.c \
 
 
-LIST_OBJ = $(LIST_SRC:$(SRC)/%.c=$(OBJS)%.o)
+LIST_OBJ = $(LIST_SRC:$(SRC)/%.c=$(OBJ)/%.o)
 
 all : $(NAME)
 
