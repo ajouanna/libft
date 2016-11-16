@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/07 16:43:08 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/16 14:22:41 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/16 14:37:06 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -97,7 +97,7 @@ void			ft_lstiter(t_list *lst, void (*f)(t_list *elem));
 t_list			*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem));
 
 /*
-** fonctions bonus ++
+** fonctions bonus non demandees
 */
 
 int				ft_isspace(int c);
