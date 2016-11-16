@@ -6,7 +6,7 @@
 /*   By: ajouanna <ajouanna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 14:30:17 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 19:10:13 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/16 14:27:31 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,7 +23,7 @@ void	ft_striteri(char *s, void (*f)(unsigned int, char *))
 {
 	unsigned int i;
 
-	if (s)
+	if (s && f)
 	{
 		i = 0;
 		while (s[i])

@@ -6,7 +6,7 @@
 /*   By: ajouanna <ajouanna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 11:56:17 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/15 11:37:13 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/16 13:09:00 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,18 +26,21 @@
 t_list			*ft_lstnew(void const *content, size_t content_size)
 {
 	t_list *res;
+	t_list *cp;
 
 	if ((res = (t_list *)malloc(sizeof(t_list))) == NULL)
 		return (NULL);
-	if (content == NULL)
+	res->content = NULL;
+	res->content_size = 0;
+	if (content)
 	{
-		res->content = NULL;
-		res->content_size = 0;
-	}
-	else
-	{
-		res->content = (void *)content;
-		res->content_size = content_size;
+		cp = ft_memalloc(content_size);
+		if (cp)
+		{
+			cp = ft_memcpy(cp, content, content_size);
+			res->content = cp;
+			res->content_size = content_size;
+		}
 	}
 	res->next = NULL;
 	return (res);

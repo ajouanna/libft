@@ -61,7 +61,8 @@ LIST_SRC = \
 		$(SRC)/ft_lstdel.c \
 		$(SRC)/ft_lstadd.c \
 		$(SRC)/ft_lstiter.c \
-		$(SRC)/ft_lstmap.c
+		$(SRC)/ft_lstmap.c \
+		$(SRC)/ft_isspace.c
 
 
 LIST_OBJ = $(LIST_SRC:$(SRC)/%.c=$(OBJ)/%.o)
