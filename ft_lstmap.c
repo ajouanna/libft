@@ -6,7 +6,7 @@
 /*   By: ajouanna <ajouanna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 11:56:17 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/15 11:37:13 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/16 12:38:53 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,7 +20,7 @@
 ** NB : ma comprehension est que c est la fonction f qui fait un malloc
 */
 
-t_list 		*ft_lstmap(t_list *lst, t_list * (*f)(t_list *elem))
+t_list	*ft_lstmap(t_list *lst, t_list *(*f)(t_list *elem))
 {
 	t_list *pt_next;
 	t_list *result;

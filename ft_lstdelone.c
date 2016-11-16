@@ -6,7 +6,7 @@
 /*   By: ajouanna <ajouanna@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/14 11:56:17 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/15 11:37:13 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/16 12:38:07 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -33,5 +33,4 @@ void		ft_lstdelone(t_list **alst, void (*del)(void *, size_t))
 		free(pt);
 		*alst = NULL;
 	}
-
 }

@@ -6,7 +6,7 @@
 /*   By: ajouanna <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2016/11/08 15:57:15 by ajouanna          #+#    #+#             */
-/*   Updated: 2016/11/14 14:52:06 by ajouanna         ###   ########.fr       */
+/*   Updated: 2016/11/16 12:41:27 by ajouanna         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,7 +17,7 @@
 ** allocates needed memory and releases memory used by str
 */
 
-char	*prependchar(char c, char *str)
+static char	*prependchar(char c, char *str)
 {
 	char	*res;
 	int		len;
@@ -32,7 +32,7 @@ char	*prependchar(char c, char *str)
 	return (res);
 }
 
-char	*ft_itoa(int n)
+char		*ft_itoa(int n)
 {
 	unsigned int	nb;
 	char			*res;
